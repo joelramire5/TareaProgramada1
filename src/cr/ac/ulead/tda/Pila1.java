@@ -53,7 +53,7 @@ public void pop(){
 }
 
 public void mostrarpila(){
-for(int i=0;i<personas.length;i++){
+for(int i=0;i<personas.length && personas[i]!=null;i++){
     System.out.println("Datos de la pila: "+" ["+i+"] "+personas[i].getNombre()+" "+personas[i].getApellido()+" "+personas[i].getFechadeNacimiento()+" "+
             personas[i].getEstatura()+" "+personas[i].getPeso());
 }

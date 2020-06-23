@@ -12,6 +12,8 @@ public class Main2A {
         Pila1 pila1 =new Pila1();
 
         pila1.push();
+        pila1.push();
+        pila1.push();
         pila1.mostrarpila();
 
 
