@@ -15,13 +15,7 @@ public class Main2A {
         pila1.push();
         pila1.push();
         pila1.mostrarpila();
-
-
-
-
-
-
-
+        pila1.menorestatura();
 
 
 
