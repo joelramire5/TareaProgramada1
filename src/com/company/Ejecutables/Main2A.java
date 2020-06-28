@@ -13,11 +13,35 @@ public class Main2A {
 
     public static void main(String[] args) throws IOException {
         Pila1 pila1 = new Pila1(50);
-        Persona persona;
-        persona= IngresarDatosPersona();
+        Persona persona = new Persona();
+        int opcion;
 
-        pila1.push(persona);
-        pila1.push(persona);
+        do {
+            System.out.println("Menu de Pila");
+            System.out.println("Opcion 1: Push");
+            System.out.println("Opcion 1: Pop");
+            opcion=ui.opcion();
+
+            switch (opcion){
+                case 1:
+                    persona= IngresarDatosPersona();
+                    pila1.push(persona);
+                    break;
+                case 2:
+                    pila1.pop(persona);
+                    pila1.mostrarpilaaux();
+
+                    break;
+
+                case 3:
+                   System.out.println("El programa ha salido con exito");
+                    System.exit(1);
+                default:
+                   System.out.println("Opcion Invalida");
+
+            }
+
+        } while(opcion!=3);
 
 
 
@@ -34,5 +58,7 @@ public class Main2A {
         return persona;
 
     }
+
+
 
 }

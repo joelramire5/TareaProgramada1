@@ -53,11 +53,11 @@ public class Cola1 {
         return estavacia;
     }
 
-    public void eliminar(){
+    public Mascota eliminar(){
         if(posicioneliminar==tamanocola){
             tamanocola=0;
         }
-        colamascotas[posicioneliminar]=null;
+        Mascota mascotaeliminada = colamascotas[posicioneliminar];
         posicioneliminar++;
         posicionmostrar++;
         if(vacio<tamanocola){
@@ -65,12 +65,15 @@ public class Cola1 {
         }else {
             vacio=0;
         }
+        return mascotaeliminada;
     }
 
     public void vercola(){
         for( int i=0; i<=colamascotas.length-1;i++){
-            System.out.println("Hola");
+            System.out.println();
         }
     }
+
+
 }
 

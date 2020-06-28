@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.Ejecutables.Main2B;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -8,6 +10,7 @@ public class UIHelper {
     public Scanner input = new Scanner(System.in);
     Persona persona = new Persona();
     Mascota mascota = new Mascota();
+
 
     Persona[] pilapersonas = new Persona[2];
 
@@ -36,11 +39,11 @@ public class UIHelper {
 
             switch (opcion) {
                 case 1:
-
+                    this.IngresarDatosPersona();
                     this.opcionmenusecundariopersona();
                     break;
                 case 2:
-                    mascota.IngresarDatosMascota();
+                   this.IngresarDatosMascota();
                     this.opcionmenusecundariomascota();
                     break;
                 case 3:
@@ -97,6 +100,7 @@ public class UIHelper {
 
             switch (opcion) {
                 case 1:
+
                     output.println(mascota.SerializadorJson());
                     break;
                 case 2:
@@ -136,13 +140,20 @@ public class UIHelper {
         return input.nextDouble();
     }
 
+    public int opcion(){
+        output.println("Introduzca la opcion: ");
+        int opcion = input.nextInt();
+        input.skip("[\r\n]");
+        return opcion;
+    }
+
     public String obtenernombremascota(){
         output.println("Introduzca el nombre de la Mascota");
         return input.nextLine();
     }
 
     public String obtenertipomascota(){
-        output.println("Introduzca el nombre de la Mascota");
+        output.println("Introduzca el tipo de animal de la Mascota");
         return input.nextLine();
     }
 
@@ -152,6 +163,31 @@ public class UIHelper {
     }
 
 
+    public void mostrarmascotajson(Mascota mascotaeliminada){
+        output.println(mascotaeliminada.SerializadorJson());
 
+    }
+    public void mostrarmascotaxml(Mascota mascotaeliminada){
+        output.println(mascotaeliminada.SerializadorXML());
+    }
+
+    private Persona IngresarDatosPersona() {
+        Persona persona = new Persona();
+        persona.setNombre(this.obtenernombre());
+        persona.setApellido(this.obtenerapellido());
+        persona.setFechadeNacimiento(this.obtenerfechadenacimiento());
+        persona.setEstatura(this.obtenerEstatura());
+        persona.setPeso(this.obtenerPeso());
+
+        return persona;
+    }
+
+    private Mascota IngresarDatosMascota(){
+        Mascota mascota = new Mascota();
+        mascota.setNombre(this.obtenernombremascota());
+        mascota.setTipoAnimal(this.obtenertipomascota());
+        mascota.setEdad(this.obteneredadmascota());
+        return mascota;
+    }
 
 }

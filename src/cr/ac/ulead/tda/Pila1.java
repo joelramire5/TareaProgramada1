@@ -1,5 +1,6 @@
 package cr.ac.ulead.tda;
 
+
 import com.company.Persona;
 
 import java.io.PrintStream;
@@ -97,6 +98,10 @@ public class Pila1 {
         }else{
             return false;
         }
+    }
+
+    public void mostrarpilaaux(){
+        System.out.println("La edad menor es :"+pilaaux[topaux].getEstatura() );
     }
 
 }
