@@ -8,44 +8,15 @@ import java.util.Scanner;
 public class Persona implements SerializadorUlead {
 
     private PrintStream output = new PrintStream(System.out);
-    private Scanner input = new Scanner(System.in);
 
-
-
-
+    
     String nombre;
     String apellido;
     String fechadeNacimiento;
-    String peso;
-    String estatura;
-
-    public Persona(String nombre, String apellido, String fechadeNacimiento, String peso, String estatura) {
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.fechadeNacimiento=fechadeNacimiento;
-        this.estatura=estatura;
-        this.peso=peso;
-
-    }
-
-    public Persona() {
-
-    }
+    Double peso;
+    Double estatura;
 
 
-    public void IngresarDatosPersona(){
-        output.println("Ingrese los datos de Persona");
-        output.println("Ingrese el Nombre");
-        nombre = input.nextLine();
-        output.println("Ingrese el Apellido");
-        apellido=input.nextLine();
-        output.println("Ingrese la fecha de Nacimiento");
-        fechadeNacimiento= input.nextLine();
-        output.println("Ingrese el Peso");
-        peso=input.nextLine();
-        output.println("Ingrese la Estatura");
-        estatura=input.nextLine();
-    }
 
     public String getNombre() {
         return nombre;
@@ -71,19 +42,18 @@ public class Persona implements SerializadorUlead {
         this.fechadeNacimiento = fechadeNacimiento;
     }
 
-    public String getPeso() {
+    public Double getPeso() {
         return peso;
     }
 
-    public void setPeso(String peso) {
+    public void setPeso(Double peso) {
         this.peso = peso;
     }
 
-    public String getEstatura() {
+    public Double getEstatura() {
         return estatura;
     }
-
-    public void setEstatura(String estatura) {
+    public void setEstatura(Double estatura) {
         this.estatura = estatura;
     }
 
@@ -100,4 +70,6 @@ public class Persona implements SerializadorUlead {
         return "<Persona> \n"+"<Nombre>"+getNombre()+"<Nombre>\n"+"<Apellido>"+getApellido()+"<Apellido\n>"+"<FechadeNacimiento>"+getFechadeNacimiento()+"<FechadeNacimiento\n>"+
         "<Estatura>"+getEstatura()+"<Estatura>\n"+"<Peso>"+getPeso()+"<Peso>\n"+"<Persona>";
     }
+
+
 }

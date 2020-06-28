@@ -6,22 +6,12 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Mascota implements SerializadorUlead {
-    private PrintStream output = new PrintStream(System.out);
-    private Scanner input = new Scanner(System.in);
 
     String nombre;
     String tipoAnimal;
     int Edad;
 
-    public void IngresarDatosMascota(){
-        output.println("Ingrese los datos de Mascota");
-        output.println("Ingrese el nombre de la mascota");
-        nombre= input.nextLine();
-        output.println("Ingrese el tipo de Animal");
-        tipoAnimal=input.nextLine();
-        output.println("Ingrese la edad de "+nombre);
-        Edad= input.nextInt();
-    }
+
 
     public String getNombre() {
         return nombre;

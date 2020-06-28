@@ -9,6 +9,8 @@ public class UIHelper {
     Persona persona = new Persona();
     Mascota mascota = new Mascota();
 
+    Persona[] pilapersonas = new Persona[2];
+
 
 
     public void menuprincipal() {
@@ -34,7 +36,7 @@ public class UIHelper {
 
             switch (opcion) {
                 case 1:
-                    persona.IngresarDatosPersona();
+
                     this.opcionmenusecundariopersona();
                     break;
                 case 2:
@@ -109,8 +111,45 @@ public class UIHelper {
 
         }while (opcion != 4) ;
     }
+    public String obtenernombre(){
+        output.println("Introduzca el Nombre ");
+        return input.nextLine();
+    }
 
+    public String obtenerapellido(){
+        output.println("Introduzca el Apellido ");
+        return input.nextLine();
+    }
 
+    public String obtenerfechadenacimiento(){
+        output.println("Introduzca la Fecha de Nacimiento: ");
+        return input.nextLine();
+    }
+
+    public Double obtenerPeso(){
+        output.println("Introduzca el Peso: ");
+        return input.nextDouble();
+    }
+
+    public Double obtenerEstatura(){
+        output.println("Introduzca el Estatura: ");
+        return input.nextDouble();
+    }
+
+    public String obtenernombremascota(){
+        output.println("Introduzca el nombre de la Mascota");
+        return input.nextLine();
+    }
+
+    public String obtenertipomascota(){
+        output.println("Introduzca el nombre de la Mascota");
+        return input.nextLine();
+    }
+
+    public int obteneredadmascota(){
+        output.println("Introduzca la edad de la Mascota");
+        return input.nextInt();
+    }
 
 
 
