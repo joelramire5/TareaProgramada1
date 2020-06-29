@@ -12,7 +12,7 @@ public class UIHelper {
     Mascota mascota = new Mascota();
 
 
-    Persona[] pilapersonas = new Persona[2];
+    Persona[] pilapersonas = new Persona[50];
 
 
 
@@ -39,11 +39,11 @@ public class UIHelper {
 
             switch (opcion) {
                 case 1:
-                    this.IngresarDatosPersona();
+                    persona=IngresarDatosPersona();
                     this.opcionmenusecundariopersona();
                     break;
                 case 2:
-                   this.IngresarDatosMascota();
+                   mascota=IngresarDatosMascota();
                     this.opcionmenusecundariomascota();
                     break;
                 case 3:
@@ -182,7 +182,7 @@ public class UIHelper {
         return persona;
     }
 
-    private Mascota IngresarDatosMascota(){
+    public Mascota IngresarDatosMascota(){
         Mascota mascota = new Mascota();
         mascota.setNombre(this.obtenernombremascota());
         mascota.setTipoAnimal(this.obtenertipomascota());

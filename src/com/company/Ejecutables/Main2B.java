@@ -17,7 +17,7 @@ public class Main2B {
     public static void main(String[] args) throws IOException {
         PrintStream output = new PrintStream(System.out);
         Scanner input = new Scanner(System.in);
-        Cola1 cola1=new Cola1(2);
+        Cola1 cola1=new Cola1(50);
         Mascota mascota = new Mascota();
         int opcion;
 

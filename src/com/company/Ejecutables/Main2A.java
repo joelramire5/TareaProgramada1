@@ -47,7 +47,7 @@ public class Main2A {
 
     }
 
-    private static Persona IngresarDatosPersona() {
+    public static Persona IngresarDatosPersona() {
         Persona persona = new Persona();
         persona.setNombre(ui.obtenernombre());
         persona.setApellido(ui.obtenerapellido());
